@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+</head>
+<body>
+    <script>
+        // Obtém a URL encurtada da barra de endereços
+        const path = window.location.pathname.substring(1);
+        const links = {
+            "meulink1": "https://exemplo.com/original",
+            "github": "https://github.com"
+        };
+
+        // Se o link existe, redireciona
+        if (links[path]) {
+            window.location.href = links[path];
+        } else {
+            document.body.innerHTML = "<h1>Link não encontrado!</h1>";
+        }
+    </script>
+</body>
+</html>
